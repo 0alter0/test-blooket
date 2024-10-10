@@ -4,50 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Blooket Integration</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-    </style>
-    <script type="text/javascript">
-        // Load the contents of Gui.min.js and store it as a hidden script in the site.
-        const guiMinJsContent = `/* Gui.min.js content here */
-        ${decodeURIComponent(`{your-file-content}`)}`;
-
-        // Add a hidden element to the site to hold Gui.min.js.
-        window.addEventListener('DOMContentLoaded', () => {
-            const hiddenScript = document.createElement('script');
-            hiddenScript.id = 'gui-min-js';
-            hiddenScript.type = 'text/javascript';
-            hiddenScript.innerHTML = guiMinJsContent;
-            hiddenScript.style.display = 'none';
-            document.body.appendChild(hiddenScript);
-        });
-
-        // Function to copy the Gui.min.js content to the clipboard.
-        function copyGuiScriptToClipboard() {
-            const hiddenScript = document.getElementById('gui-min-js');
-            if (hiddenScript) {
-                // Create a temporary text area to copy the script content.
-                const tempTextArea = document.createElement('textarea');
-                tempTextArea.value = hiddenScript.innerHTML;
-                document.body.appendChild(tempTextArea);
-                tempTextArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(tempTextArea);
-                alert('Run in console');
-            }
-        }
+    <script id="gui-min-js" type="text/javascript">
+        // Content of Gui.min.js goes here
+        /* Example */
+        console.log('This is the Gui.min.js content.');
     </script>
 </head>
 <body>
-    <h1>Test Blooket Integration</h1>
-    <p>This site integrates <code>Gui.min.js</code> script for bookmarklet interaction.</p>
-
-    <script>
-        // Bookmarklet function call example:
-        copyGuiScriptToClipboard();
-    </script>
+    <h1>Welcome to the Blooket Test Site</h1>
+    <p>This site is set up to test bookmarklet interactions.</p>
 </body>
 </html>
